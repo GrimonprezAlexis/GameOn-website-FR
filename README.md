@@ -15,7 +15,7 @@ Ajouter le code JavaScript manquant pour que le formulaire soit pleinement fonct
 HTML, CSS, Javascript, Github
 
 ### Hébergement
-[#Projet 4 - GameOn](https://grimonprezalexis.github.io/GameOn-website-FR)
+[#Projet 4 - GameOn](https://grimonprezalexis.github.io/GameOn-website-FR/starterOnly/)
 
 ### Maquette
 [Maquette](https://www.figma.com/file/prxFGnSUoEhk6PTcMaJQim/UI-Design-GameOn-EN)
