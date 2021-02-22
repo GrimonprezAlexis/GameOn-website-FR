@@ -31,14 +31,11 @@ img {
 }
 
 .topnav {
-  overflow: hidden;
-  margin: 3.5%;
-}
-.header-logo {
-    float: left;
-}
-.main-navbar {
-    float: right;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 2.8rem;
 }
 .topnav a {
   float: left;
@@ -73,15 +70,29 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
+    color: #fe142f;
+    font-size: 8vw;
+    margin-top: -2rem;
+  }
+
+  .topnav a:hover {
+    background: none;
+    color: #fe142f;
+  }
+
+  .main-navbar {
+    margin-top: 1.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative; display: block; padding-top: 4rem;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    margin: 2.3rem 3.1rem;
+    background: none;
   }
   .topnav.responsive a {
     float: none;
@@ -92,14 +103,18 @@ img {
 
 
 
- @media screen and (max-width: 540px) {
+@media screen and (max-width: 540px) {
+  .header-logo img {
+    width: 200px;
+  }
+
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
-} 
+}
+
 
 main {
   font-size: 130%;
