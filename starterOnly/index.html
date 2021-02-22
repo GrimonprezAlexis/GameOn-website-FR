@@ -60,7 +60,7 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="return validate(this);"
             >
               <div
                 class="formData">
@@ -73,6 +73,8 @@
                   minlength="2"
                 /><br>
               </div>
+              <p class="errorField" id="error-firstName"></p>
+              
               <div
                 class="formData">
                 <label for="last">Nom</label><br>
@@ -84,6 +86,8 @@
                   minlength="2"
                 /><br>
               </div>
+              <p class="errorField" id="error-lastName"></p>
+
               <div
                 class="formData">
                 <label for="email">E-mail</label><br>
@@ -94,6 +98,8 @@
                   name="email"
                 /><br>
               </div>
+              <p class="errorField" id="error-email"></p>
+
               <div
                 class="formData">
                 <label for="birthdate">Date de naissance</label><br>
@@ -104,11 +110,15 @@
                   name="birthdate"
                 /><br>
               </div>
+              <p class="errorField" id="error-birthdate"></p>
+
               <div
                 class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
+              <p class="errorField" id="error-tournament"></p>
+
               <p class="text-label">Quelles villes ?</p>
               <div
                 class="formData">
@@ -179,12 +189,14 @@
                   Portland</label
                 >
               </div>
+              <p class="errorField" id="error-location"></p>
 
               <div
                 class="formData">
                 <input
                   class="checkbox-input"
                   type="checkbox"
+                  name="terms"
                   id="checkbox1"
                   checked
                 />
@@ -193,6 +205,8 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
+                <p class="errorField" id="error-terms"></p>
+
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
