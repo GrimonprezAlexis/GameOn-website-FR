@@ -41,7 +41,10 @@ function checkCondition(condition){
 }
 
 function getErrorMessage(elementId, message){
-  if(elementId && message) document.getElementById(elementId).innerText = message;
+  if(elementId && message) {
+    document.getElementById(elementId).style.display = "block";
+    document.getElementById(elementId).innerText = message;
+  }
   else throw new Error('Missing parameter for handler error message');
 }
 
