@@ -30,16 +30,18 @@ function closeModal() {
 // Close modal event
 modalCloseBtn[0].addEventListener ("click", closeModal);
 
+// Keep form data
 form[0].addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
-
+// Check validation of condition provided
 function checkCondition(condition){
   if(!condition) return false;
   else return true;
 }
 
+// Send specific error message rather than elementId provided
 function getErrorMessage(elementId, message){
   if(elementId && message) {
     document.getElementById(elementId).style.display = "block";
@@ -53,6 +55,7 @@ function hideErrorMessage(elementId) {
   if(elementId) document.getElementById(elementId).style.display = "none";
 }
 
+//Check after submit form conditon, and call function who show specific message or a valid field
 function validate(form) { 
     let firstNameValid = checkCondition(form["first"].value) && checkCondition(form["first"].value.length >= 2);
     firstNameValid ? hideErrorMessage('error-firstName') : getErrorMessage('error-firstName', "Veuillez entrer 2 caractères ou plus pour le champ du prénom.");
@@ -77,6 +80,7 @@ function validate(form) {
     let termsValid = checkCondition(form.terms.checked);
     termsValid ? hideErrorMessage('error-terms') : getErrorMessage('error-terms', "Veuillez indiquer que vous acceptez les conditions générales.");
 
+    // Check the confirmation form, show a confirmation message
     if(
         firstNameValid 
         && lastNameValid 
