@@ -534,3 +534,9 @@ footer {
   margin-bottom: 10px;
 }
 
+.formConfirmation {
+    padding: 15px 8%;
+    margin: 15px auto;
+    display: none;
+}
+

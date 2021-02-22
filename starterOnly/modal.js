@@ -74,4 +74,16 @@ function validate(form) {
     let termsValid = checkCondition(form.terms.checked);
     termsValid ? hideErrorMessage('error-terms') : getErrorMessage('error-terms', "Veuillez indiquer que vous acceptez les conditions générales.");
 
+    if(
+        firstNameValid 
+        && lastNameValid 
+        && emailValid
+        && birthdateValid 
+        && qteTournamentValid
+        && locationValid
+        && termsValid
+      ) {
+        document.querySelector(".modal-body").style.display = "none";
+        document.querySelector(".formConfirmation").style.display = "block";
+      }
   }
